@@ -142,6 +142,10 @@ const run = async (): Promise<number> => {
     datasetLocation,
     wildcardIds: queryCollectionGroup,
     useNewSnapshotQuerySyntax,
+    timePartitioning: "DAY",
+    timePartitioningField: "updated_at",
+    timePartitioningFieldType: "TIMESTAMP",
+    timePartitioningFirestoreField: "updatedAt",
   });
 
   console.log(
